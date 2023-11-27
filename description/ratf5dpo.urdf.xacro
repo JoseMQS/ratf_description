@@ -3,4 +3,14 @@
 
     <xacro:include filename="chassis.xacro" />
 
+    <plugin name="gazebo_ros_planar_move" filename="libgazebo_ros_planar_move.so">
+        <robotNamespace>/robot_namespace</robotNamespace>
+        <commandTopic>cmd_vel</commandTopic>
+        <odometryTopic>odom</odometryTopic>
+        <odometryFrame>odom</odometryFrame>
+        <robotBaseFrame>base_link</robotBaseFrame>
+        <odometryRate>20.0</odometryRate>
+        <cmdTimeout>-1</cmdTimeout>
+    </plugin>
+
 </robot>
